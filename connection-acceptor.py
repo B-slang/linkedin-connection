@@ -3,6 +3,7 @@ from time import sleep
 from selenium import webdriver
 # from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.chrome import ChromeDriverManager
+from config import dotenv_values
  
 # linkedin post liker
 #
