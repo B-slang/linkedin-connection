@@ -35,23 +35,3 @@ driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=option
  
 driver.get("https://linkedin.com")
 # delete this after every month
- 
-while "1" != input("press 1 when signed in: "):
-    pass
-for link in links:
-    try:
-        print("accessing link ", link)
-        driver.get(link)
-        sleep(2)
-        el = driver.find_element_by_class_name("react-button__trigger")
-        if "false" == el.get_attribute("aria-pressed"):
-            print("liking")
-            el.click()
-            print("liked")
-            sleep(1)
-        else:
-            print("already processed link ", link)
-    except Exception as e:
-        print("error processing link\nlink: ", link, "\nerror",  e)
- 
-driver.close()
