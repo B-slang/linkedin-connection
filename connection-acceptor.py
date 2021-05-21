@@ -13,6 +13,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 # To like other people's post:
 # step 0 : you need chrome for this. Also install modules :
 # pip install selenium && pip install webdriver_manager && pip install tinydb
+
+email=os.environ.get('LINKEDIN_EMAIL')
+password=os.environ.get('LINKEDIN_password')
+driver.find_element_by_id("username").send_keys(email)
+driver.find_element_by_id("password").send_keys(password)
+
  
 # # step 1 change this from : https://docs.google.com/document/d/1YiPKlYkzGMO08HfpZuOZ-S4B-t6KrA7-Xe1x1ElFmnk/edit?usp=sharing
 links = [
