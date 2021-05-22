@@ -1,5 +1,6 @@
 import os
-from time import sleep
+# from time import sleep
+import time
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
@@ -23,16 +24,17 @@ driver.find_element_by_id("password").send_keys(password)
 
 
 # signin button
-driver.find_element_by_class_name("btn__primary--large").click()
+driver.find_element_by_css_selector(".btn__primary--large").click()
 
 # url
 driver.get("https://www.linkedin.com/mynetwork/invitation-manager/")
 
 # connection hi nai h to pata nai chalra kaam kar rha h ye ki nai copy at your own risk
-connectpepul = []
-while len(connectpepul) == 0:
-    connectpepul = driver.find_element_by_xpath("/html/body/div[7]/div[3]/div/div/div/div/div/div/div/main/section/div[2]/section/div/ul/li/div[1]/div[2]/button[2]")
+button = []
+while len(button) == 0:
+    button = driver.find_elements_by_xpath("//button[@class='invitation-card__action-btn artdeco-button artdeco-button--2 artdeco-button--secondary ember-view']")
 
 # traversal in connectpepul
-for pepul in connectpepul:
+for pepul in button:
     pepul.click()
+    time.sleep(3)
