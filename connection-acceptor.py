@@ -1,9 +1,7 @@
 import os
 from time import sleep
 from selenium import webdriver
-# from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.chrome import ChromeDriverManager
-# from config import dotenv_values
  
 # linkedin post liker
 #
@@ -32,5 +30,6 @@ driver.find_element_by_id("password").send_keys(password)
 driver.find_element_by_class_name("btn__primary--large").click()
 
 driver.get("https://www.linkedin.com/mynetwork/invitation-manager/")
+
 
 
