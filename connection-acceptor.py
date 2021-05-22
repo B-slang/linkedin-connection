@@ -33,6 +33,6 @@ connectpepul = []
 while len(connectpepul) == 0:
     connectpepul = driver.find_element_by_xpath("/html/body/div[7]/div[3]/div/div/div/div/div/div/div/main/section/div[2]/section/div/ul/li/div[1]/div[2]/button[2]")
 
-
+# traversal in connectpepul
 for pepul in connectpepul:
     pepul.click()
